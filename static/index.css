@@ -1,5 +1,5 @@
 body{
-    background: url(scifi.webp) no-repeat center center fixed; 
+    background: url(tunnel.jpg) center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,9 +8,9 @@ body{
 .form{
     text-align: center;
     width: 450px;
-    height:400px;
+    height:350px;
     margin: auto;
-    margin-top: 250px;
+    margin-top: 150px;
     border-radius:33px;
     padding:30px;
     background-color:white;
