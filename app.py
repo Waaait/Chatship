@@ -19,7 +19,6 @@ def chatroom():
     if(request.method=='POST'):
         username = request.form['username']
         room = request.form['room']
-        #Store the data
         session['username'] = username
         session['room'] = room
         return render_template('chatroom.html', session = session)
@@ -31,23 +30,25 @@ def chatroom():
 
 @socketio.on('join', namespace='/chatroom')
 def on_join(data):
+    username = session.get('username')
     room = session.get('room')
     join_room(room)
-    emit('status', {'msg' : session.get('username') + ' has entered the space.'}, room=room)
+    emit('status', {'msg' : username + ' has entered '+ room +'.'}, room=room)
 
 @socketio.on('text', namespace='/chatroom')
-def on_join(data):
+def text(data):
+    username = session.get('username')
     room = session.get('room')
     join_room(room)
-    emit('message', {'msg' : session.get('username') + ': '+data['msg']}, room=room)
+    emit('message', {'msg' : username + ': '+data['msg']}, room=room)
 
 @socketio.on('leave', namespace='/chatroom')
 def on_leave(data):
     username = session.get('username')
     room = session.get('room')
     leave_room(room)
-    emit('status', {'msg' : session.get('username') + ' has left the room.'}, room=room)
     session.clear()
+    emit('status', {'msg' : username + ' has left '+ room +'.'}, room=room)
 
 if __name__=='__main__':
     socketio.run(app)

@@ -15,7 +15,7 @@
 <body>
     <div class="chatWindow">
         <div class="col head">
-            <p class="h4">Coordinate(room): <script>session.get('room')</script> </p>
+            <p class="h4">Coordinate(room): {{session.get('room')}} </p>
             <button type="button" id="leavebtn" class="btn btn-outline-danger btn-sm" onclick="leave_room()">Leave now</button>
             <br>
         </div>
@@ -24,7 +24,7 @@
             <br>
         </div>
         <div class="col window">
-            <input type="text" id="text" size="72" placeholder="[Classified]">
+            <input type="text" id="text" size="77" placeholder="[Classified text here]">
             <button type="button" class="btn btn-outline-success" id="send">SEND</button>    
         </div>
         
