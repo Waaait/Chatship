@@ -1,7 +1,8 @@
 var socket;
 
 $(document).ready( () =>  {
-    socket = io.connect('http://' + document.domain + ":" + location.port + '/chatroom');
+    // socket = io.connect('https://' + document.domain + ":" + location.port + '/chatroom');
+    socket = io.connect('https://chatship.herokuapp.com/' + '/chatroom');
     socket.on('connect', () => {
         socket.emit('join', {});
     });
