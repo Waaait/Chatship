@@ -10,3 +10,11 @@ python-socketio
 six==1.11.0
 Werkzeug==0.14.1
 gunicorn==20.0.4
+bottle==0.10.7
+distribute==0.6.10
+eventlet==0.9.16
+greenlet==0.3.3
+lxml==2.3.3
+pymongo==2.1.1
+simplejson==2.3.2
+wsgiref==0.1.2
