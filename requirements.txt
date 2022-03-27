@@ -11,4 +11,4 @@ six==1.11.0
 Werkzeug==0.14.1
 gunicorn==20.0.4
 bottle==0.10.7
-eventlet==0.9.16
+eventlet==0.33.0
