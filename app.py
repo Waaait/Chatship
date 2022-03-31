@@ -51,5 +51,5 @@ def on_leave(data):
     emit('status', {'msg' : username + ' has left '+ room +'.'}, room=room)
 
 if __name__=='__main__':
-    # socketio.run(app)
-    app.run()
+    socketio.run(app)
+    # app.run()
