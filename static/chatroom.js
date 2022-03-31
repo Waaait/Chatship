@@ -1,4 +1,4 @@
-var socket;
+let socket = io({autoConnect: false});
 
 $(document).ready( () =>  {
     socket = io.connect('http://' + document.domain + ":" + location.port + '/chatroom');
