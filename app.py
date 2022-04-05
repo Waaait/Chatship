@@ -4,7 +4,7 @@ from flask_session import Session
 
 app = Flask(__name__)
 app.Debug = True
-app.config['SECRET_KEY'] = 'individualsecrete'
+app.config['SECRET_KEY'] = 'secrete'
 app.config['SESSION_TYPE'] = 'filesystem'
 
 Session(app)
@@ -52,4 +52,3 @@ def on_leave(data):
 
 if __name__=='__main__':
     socketio.run(app)
-    # app.run()
