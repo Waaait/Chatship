@@ -19,3 +19,5 @@ export FLASK_ENV=development
 ```
 flask run
 ```
+
+Note: unsuccessful Proc file for deploy, need to be update soon.
