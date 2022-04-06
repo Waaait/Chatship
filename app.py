@@ -1,3 +1,7 @@
+####
+#   Main reference: https://github.com/msindev/Chat-App-Flask-SocketIO
+###
+
 from flask import Flask, render_template, session, url_for, request, redirect
 from flask_socketio import SocketIO, join_room, leave_room, emit
 from flask_session import Session
